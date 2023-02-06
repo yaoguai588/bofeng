@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}
+  博峰论坛首页
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+  <div class="row mt-4">
+    <div class="col"></div>
+    <div class="col">
+      <form action="{{ url_for("user.login")}}" method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1">邮箱地址</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">密码</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+        <div class="form-group">
+          {% for message in get_flashed_messages() %}
+            <div>
+            <div class="text-danger">{{ message }}</div>
+            </div>
+          {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">立即登陆</button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+{% endblock %}
