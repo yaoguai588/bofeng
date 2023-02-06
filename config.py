@@ -9,6 +9,7 @@ DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD
 SQLALCHEMY_DATABASE_URI = DB_URI
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
+# 秘钥
 SECRET_KEY = "SDFASDFASDFASDFASDFASDF"
 
 # 邮箱配置
@@ -19,5 +20,6 @@ MAIL_USE_TLS = False
 MAIL_USE_SSL = True
 MAIL_DEBUG = True
 MAIL_USERNAME = "2584686736@qq.com"
-MAIL_PASSWORD = "piwvoiukijwpebfb"
+# 填写自己邮箱的smtp服务授权码
+MAIL_PASSWORD = "xxxxxxxxxxxx"
 MAIL_DEFAULT_SENDER = "2584686736@qq.com"
