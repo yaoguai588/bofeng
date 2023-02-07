@@ -1,5 +1,5 @@
 # 博峰论坛
-基于flask框架搭建的互动问答论坛
+基于flask框架搭建的互动问答论坛，该项目还提供了应用上云—使用nginx部署flask项目方案并完成动静分离与负载均衡(ip_hash)。
 # 项目结构
 ![image](https://user-images.githubusercontent.com/77235548/217037449-a67ed7fd-cc44-4974-a8ac-5cfb8336121c.png)
 
