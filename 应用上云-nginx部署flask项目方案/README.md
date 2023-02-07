@@ -4,7 +4,7 @@
 
 nginx + uWSGI + flask的架构图如下所示：
 
-![image-20230207235802762](C:\妖怪的学习笔记\images.assets\image-20230207235802762.png)
+![image](https://user-images.githubusercontent.com/77235548/217321218-b1745254-510b-407b-b221-fb48f50d6932.png)
 
 ## 为什么需要flask+nginx+uWSGI?
 
@@ -93,15 +93,17 @@ uWSGI是python的一个库，安装了这个库之后，我们可以使用命令
 
 1.使用 **--http** 指明了通信协议为http或https。因此这种模式，通过浏览器可以直接与web服务器通信。这种情况并没有使用nginx，仅仅是通过uWSGI+flask。
 
-![image-20230207234107862](C:\妖怪的学习笔记\images.assets\image-20230207234107862.png)
+![image](https://user-images.githubusercontent.com/77235548/217322224-d6091020-5242-4612-b94f-9aa1f0feeb7f.png)
+
 2.而使用 **--socket** 是在如下的这种情况。
 
-![image-20230207234134952](C:\妖怪的学习笔记\images.assets\image-20230207234134952.png)
+![image](https://user-images.githubusercontent.com/77235548/217322256-207ff57a-9687-40d4-aad5-3346ea5f3f1f.png)
+
 这种情况应该是uWSGI web服务器和nginx进行通信，并不是通过http协议或者htttps协议，而是通过其它协议（通常是uwsgi协议)进行的。
 
 整体流程是：
 
-![image-20230207234507855](C:\妖怪的学习笔记\images.assets\image-20230207234507855.png)
+![image](https://user-images.githubusercontent.com/77235548/217322307-9b9abd00-bd92-4719-902d-da3ba2f2a0ab.png)
 
 ### 启动一个uWSGI 服务器
 
@@ -151,7 +153,7 @@ touch-chain-reload = true
 
 nginx中的协议支持如下如所示，客户端是下游，nginx之后的web服务器是上游
 
-![image-20230207234711949](C:\妖怪的学习笔记\images.assets\image-20230207234711949.png)
+![image](https://user-images.githubusercontent.com/77235548/217322356-92c48ad8-f03f-4a94-a101-fe83a28d9f5f.png)
 
 ### 安装nginx
 
